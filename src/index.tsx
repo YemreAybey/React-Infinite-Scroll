@@ -1,17 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React, { FC } from 'react';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+export interface ButtonProps {
+  primary?: boolean;
+  onClick?: () => void;
+}
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+export const ReactInfiniteScroll: FC<ButtonProps> = (props: ButtonProps): JSX.Element => {
+  return (
+    <button
+      type='button'
+      style={{
+        background: `${props.primary ? 'palevioletred' : 'white'}`,
+        color: `${props.primary ? 'white' : 'palevioletred'}`,
+        fontSize: '1em',
+        margin: '1em',
+        padding: '0.25em 1em',
+        border: '2px solid palevioletred',
+        borderRadius: '10px',
+      }}>
+      Hello
+    </button>
+  );
+};
