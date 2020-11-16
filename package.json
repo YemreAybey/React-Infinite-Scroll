@@ -1,6 +1,6 @@
 {
-  "name": "my-app",
-  "version": "0.1.0",
+  "name": "react-infinite-scroll-with-hooks",
+  "version": "1.0.0",
   "source": "src/index.tsx",
   "main": "dist/index.js",
   "files": [
@@ -20,6 +20,16 @@
     "storybook": "start-storybook -p 6006 --no-dll",
     "build-storybook": "build-storybook --no-dll"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YemreAybey/React-Infinite-Scroll.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YemreAybey/React-Infinite-Scroll/issues"
+  },
+  "homepage": "https://github.com/YemreAybey/React-Infinite-Scroll#readme",
+  "author": "Emre AYBEY",
+  "license": "MIT",
   "browserslist": {
     "production": [
       ">0.2%",
@@ -36,13 +46,9 @@
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0"
   },
-  "babel": {
-    "presets": [
-      "kcd-scripts/babel"
-    ]
-  },
   "devDependencies": {
     "@babel/core": "^7.12.3",
+    "@babel/runtime": "^7.12.5",
     "@storybook/addon-actions": "^6.0.28",
     "@storybook/addon-essentials": "^6.0.28",
     "@storybook/addon-links": "^6.0.28",

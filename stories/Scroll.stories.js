@@ -1,5 +1,5 @@
 /* eslint-disable import/no-anonymous-default-export */
-import { ReactInfiniteScroll } from '../index';
+import ReactInfiniteScroll from '../src/stories/infinite';
 
 export default {
   title: 'ReactInfiniteScroll',
@@ -12,9 +12,4 @@ export default {
 const Template = args => <ReactInfiniteScroll {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = {
-  primary: true,
-};
-
-export const Secondary = Template.bind({});
-Secondary.args = {};
+Primary.args = {};
