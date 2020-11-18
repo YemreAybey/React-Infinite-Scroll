@@ -15,7 +15,7 @@ const addTenItems = data => {
 
 const style = {
   border: '1px solid blue',
-  height: '30px',
+  height: '200px',
   margin: '5px',
   padding: '10px',
 };
@@ -29,7 +29,7 @@ const MyComp = () => {
 
   return (
     <div style={{ height: '300px' }}>
-      <InfiniteScroll hasMore={data.length < 50} callBack={callBack}>
+      <InfiniteScroll hasMore={data.length < 50} callBack={callBack} useTopScroll={true}>
         {data.map(num => (
           <div key={num} style={style}>
             {num}
