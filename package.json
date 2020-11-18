@@ -1,5 +1,5 @@
 {
-  "name": "react-infinite-scroll-with-hooks",
+  "name": "react-infinite-scroll",
   "version": "1.0.0",
   "source": "src/index.tsx",
   "main": "dist/index.js",
@@ -18,6 +18,14 @@
     "storybook": "start-storybook -p 6006 --no-dll",
     "build-storybook": "build-storybook --no-dll"
   },
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/changelog",
+    "@semantic-release/github",
+    "@semantic-release/npm",
+    "@semantic-release/git"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/YemreAybey/React-Infinite-Scroll.git"
