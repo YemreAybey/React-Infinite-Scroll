@@ -48,7 +48,7 @@ yarn add react-infinite-scroll
 
 Import component at top level:
 ```
-import InfiniteScroll from 'react-infinite-scroll';
+import { InfiniteScroll } from 'react-infinite-scroll';
 ```
 
 DOM scroll events
@@ -148,9 +148,6 @@ Create a new Pull Request
 - [YemreAybey](https://github.com/YemreAybey)
 - [SafaErden](https://github.com/SafaErden)
 - [BatuhanYilmazzz](https://github.com/BatuhanYilmazzz)
-
-## Acknowledgements
-* [Microverse](https://www.microverse.org/)
 
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/YemreAybey/React-Infinite-Scroll.svg?style=flat-square
