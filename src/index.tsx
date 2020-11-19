@@ -4,7 +4,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { CSSProperties, FC, useRef, useEffect } from 'react';
 import styled, { StyledComponent } from 'styled-components';
-import './stories/infinite.css';
 export interface InfiniteScrollProps extends React.ComponentProps<any> {
   /** This is important for your callback to run
    * if it is false your callback will never run.
