@@ -1,6 +1,6 @@
 # React Infinite Scroll with Hooks
 
-Add infinite scroll feature to you applications with React Infinite Scroll Component. You can use it anywhere in any condition including window and scrollable elements.
+Add infinite scroll feature to you applications with React Infinite Scroll Component. You can use it anywhere in any condition.
 
 
 [![Contributors][contributors-shield]][contributors-url]
@@ -25,6 +25,7 @@ Add infinite scroll feature to you applications with React Infinite Scroll Compo
 * [Installation](#installation)
 * [Usage](#usage)
 * [Props](#props)
+* [Contribute](#contribute)
 * [Contributors](#contributors)
 * [License](#license)
 
@@ -50,39 +51,96 @@ Import component at top level:
 import InfiniteScroll from 'react-infinite-scroll';
 ```
 
-Wrap the content that you want to make scrollable:
-```
-<InfiniteScroll
-    pageStart={0}
-    loadMore={loadFunc}
-    hasMore={true || false}
-    loader={<div className="loader" key={0}>Loading ...</div>}
->
-    {items} // <-- This is the content you want to load
-</InfiniteScroll>
-```
-
 DOM scroll events
+
 ```
-<div style="height:700px;overflow:auto;">
-    <InfiniteScroll
-        pageStart={0}
-        loadMore={loadFunc}
-        hasMore={true || false}
-        loader={<div className="loader" key={0}>Loading ...</div>}
-        useWindow={false}
+/*
+Infinite scroll component fills the whole width and height of its wrapper. Style your wrapper div accoordingly.
+*/
+<div style={{ height: '300px' }}>
+    <InfiniteScroll 
+        Loader = <MyCustomLoader />,
+        hasMore,
+        callBack = {myCallBack},
+        containerStyle = {},
+        useLoader = true,
+        useTopScroll = true,
     >
-        {items}
+    {data.map(num => (
+        <div key={num} style={style}>
+        {num}
+        </div>
+    ))}
     </InfiniteScroll>
 </div>
 ```
 
+Example Component
+```
+import React, { useState } from 'react';
+import { InfiniteScroll } from 'react-infinite-scroll';
+
+const addTenItems = data => {
+  const newData = [...data];
+  const base = newData.length;
+
+  for (let i = 1; i <= 10; i++) {
+    newData.push(base + i);
+  }
+  return newData;
+};
+
+const style = {
+  border: '1px solid blue',
+  height: '30px',
+  margin: '5px',
+  padding: '10px',
+};
+
+const MyComp = () => {
+  const [data, setData] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+
+  const callBack = () => {
+    setTimeout(() => setData(d => addTenItems(d)), 1500);
+  };
+
+  return (
+    <div style={{ height: '300px' }}>
+      <InfiniteScroll hasMore={data.length < 50} callBack={callBack}>
+        {data.map(num => (
+          <div key={num} style={style}>
+            {num}
+          </div>
+        ))}
+      </InfiniteScroll>
+    </div>
+  );
+};
+
+export default MyComp;
+```
+
 ## Props
 
-| Name | Required | Type | Descriptionn |
-| --- | --- | --- | --- |
-| xdddddddd | yes | a | description goes  |
-| y | no | b | description goes here |
+| Name | Required | Type | Default | Descriptionn |
+| --- | --- | --- | --- | --- |
+| Loader | no | element | three dots | Loader spinner to show when callback function is called. |
+| useLoader | no | boolen | true | Whether to show loader or not.  |
+| hasMore | yes | boolean | --- | If there are more items to be loaded. |
+| callBack | yes | function | --- | A callback when more items are requested by the user.  |
+| containerStyle | no | CSSProperties | { } | Style for wrapper div of items.  |
+| children | yes | element | --- | Content for infinite scroll.  |
+| useTopScroll | no | boolean | false | Reverse scroll direction from top-to-bottom to bottom-to-top. |
+
+## Contribute
+
+Contributions, issues and feature requests are welcome!
+
+1. Fork it (https://github.com/YemreAybey/React-Infinite-Scroll/fork)
+2. Create your working branch (git checkout -b [choose-a-name])
+3. Commit your changes (git commit -am 'what this commit will fix/add/improve')
+4. Push to the branch (git push origin [chosen-name])
+Create a new Pull Request
 
 ## Contributors
 
