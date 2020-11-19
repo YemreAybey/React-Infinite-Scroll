@@ -14,8 +14,15 @@ jobs:
         run: npm install
       - name: Build app
         run: npm run build
-      - name: Semantic release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npx semantic-release
+      - name: Publish if version has been updated
+      uses: pascalgn/npm-publish-action@1.3.4
+      with: # All of theses inputs are optional
+        tag_name: "v%s"
+        tag_message: "v%s"
+        commit_pattern: "^Release (\\S+)"
+        workspace: "."
+        publish_command: "yarn"
+        publish_args: "--non-interactive"
+      env: # More info about the environment variables in the README
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Leave this as is, it's automatically generated
+        NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }} # You need to set this in your repo settings
