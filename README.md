@@ -37,18 +37,18 @@ This project's purpose is to provide an easy solution for implementing infinite 
 ## Installation
 
 ```
-npm install react-infinite-scroll --save
+npm i react-infinite-scroll-comp --save
 ```
 
 ```
-yarn add react-infinite-scroll
+yarn add react-infinite-scroll-comp
 ```
 
 ## Usage
 
 Import component at top level:
 ```
-import { InfiniteScroll } from 'react-infinite-scroll';
+import { InfiniteScroll } from 'react-infinite-scroll-comp';
 ```
 
 DOM scroll events
@@ -79,7 +79,7 @@ Style your wrapper div accoordingly.
 Example Component
 ```
 import React, { useState } from 'react';
-import { InfiniteScroll } from 'react-infinite-scroll';
+import { InfiniteScroll } from 'react-infinite-scroll-comp';
 
 const addTenItems = data => {
   const newData = [...data];
