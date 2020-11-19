@@ -1,25 +1,41 @@
 {
-  "name": "my-app",
-  "version": "0.1.0",
+  "name": "react-infinite-scroll",
+  "version": "1.0.0",
   "source": "src/index.tsx",
   "main": "dist/index.js",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "rimraf dist && rollup -c",
-    "start": "rollup -c -w",
+    "build": "rimraf dist && tsc",
     "test": "kcd-scripts test",
-    "eject": "react-scripts eject",
     "lint": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx .",
     "check-types": "tsc",
     "prettier": "prettier --ignore-path .gitignore \"**/*.+(ts|tsx|js|jsx|json)\"",
     "format": "npm run prettier -- --write",
     "check-format": "npm run prettier -- --list-different",
-    "validate": "npm-run-all --parallel check-types check-format lint test",
+    "validate": "npm-run-all --parallel check-types check-format lint",
     "storybook": "start-storybook -p 6006 --no-dll",
     "build-storybook": "build-storybook --no-dll"
   },
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/changelog",
+    "@semantic-release/github",
+    "@semantic-release/npm",
+    "@semantic-release/git"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YemreAybey/React-Infinite-Scroll.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YemreAybey/React-Infinite-Scroll/issues"
+  },
+  "homepage": "https://github.com/YemreAybey/React-Infinite-Scroll#readme",
+  "author": "Emre AYBEY",
+  "license": "MIT",
   "browserslist": {
     "production": [
       ">0.2%",
@@ -36,13 +52,9 @@
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0"
   },
-  "babel": {
-    "presets": [
-      "kcd-scripts/babel"
-    ]
-  },
   "devDependencies": {
     "@babel/core": "^7.12.3",
+    "@babel/runtime": "^7.12.5",
     "@storybook/addon-actions": "^6.0.28",
     "@storybook/addon-essentials": "^6.0.28",
     "@storybook/addon-links": "^6.0.28",
@@ -54,10 +66,11 @@
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.53",
     "@types/react-dom": "^16.9.8",
+    "@types/styled-components": "^5.1.4",
     "@typescript-eslint/eslint-plugin": "^4.6.1",
     "@typescript-eslint/parser": "^4.6.1",
     "babel-core": "^6.26.3",
-    "babel-loader": "^8.2.0",
+    "babel-loader": "^8.2.1",
     "babel-runtime": "^6.26.0",
     "eslint": "^7.13.0",
     "eslint-config-prettier": "^6.15.0",
@@ -70,9 +83,8 @@
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "^4.3.0",
-    "jest": "^26.6.3",
     "jest-axe": "^4.1.0",
-    "kcd-scripts": "^7.0.2",
+    "kcd-scripts": "^7.0.3",
     "lint-staged": "^10.5.1",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.1.2",
@@ -80,9 +92,8 @@
     "react-dom": "^17.0.1",
     "react-is": "^17.0.1",
     "rimraf": "^3.0.2",
-    "rollup": "^2.33.1",
-    "rollup-plugin-sass": "^1.2.2",
-    "rollup-plugin-typescript2": "^0.29.0",
+    "semantic-release": "^17.2.3",
+    "styled-components": "^5.2.1",
     "ts-jest": "^26.4.4",
     "typescript": "^4.0.3"
   }

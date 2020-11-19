@@ -22,8 +22,9 @@
     "alwaysStrict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noImplicitReturns": true
+    "noImplicitReturns": true,
+    "skipLibCheck": true
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "dist", "rollup.config.js"]
+  "include": ["src", "stories"],
+  "exclude": ["node_modules", "dist"]
 }
