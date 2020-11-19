@@ -1,6 +1,6 @@
 # React Infinite Scroll with Hooks
 
-Add infinite scroll feature to you applications with React Infinite Scroll Component. You can use it anywhere in any condition.
+Add infinite scroll feature to your applications with React Infinite Scroll Component. You can use it anywhere in any condition.
 
 
 [![Contributors][contributors-shield]][contributors-url]
@@ -55,7 +55,8 @@ DOM scroll events
 
 ```
 /*
-Infinite scroll component fills the whole width and height of its wrapper. Style your wrapper div accoordingly.
+Infinite scroll component fills the whole width and height of its wrapper. 
+Style your wrapper div accoordingly.
 */
 <div style={{ height: '300px' }}>
     <InfiniteScroll 
@@ -146,6 +147,7 @@ Create a new Pull Request
 
 - [YemreAybey](https://github.com/YemreAybey)
 - [SafaErden](https://github.com/SafaErden)
+- [BatuhanYilmazzz](https://github.com/BatuhanYilmazzz)
 
 ## Acknowledgements
 * [Microverse](https://www.microverse.org/)
