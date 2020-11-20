@@ -2,16 +2,12 @@
 
 Add infinite scroll feature to your applications with React Infinite Scroll Component. You can use it anywhere in any condition.
 
-
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
+[![Contributors][contributors-shield]][contributors-url] [![Forks][forks-shield]][forks-url] [![Stargazers][stars-shield]][stars-url] [![Issues][issues-shield]][issues-url]
 
 <p align="center">
   <h1 align="center">RISH</h1>
   <p align="center">
-    <a href="">Demo</a>
+    <a href="https://codesandbox.io/s/quizzical-sea-vqbb0?file=/src/App.js">Demo</a>
     ·
     <a href="https://github.com/YemreAybey/React-Infinite-Scroll/issues">Report Bug</a>
     ·
@@ -21,18 +17,17 @@ Add infinite scroll feature to your applications with React Infinite Scroll Comp
 
 ## Table of Contents
 
-* [About the Project](#about-the-project)
-* [Installation](#installation)
-* [Usage](#usage)
-* [Props](#props)
-* [Contribute](#contribute)
-* [Contributors](#contributors)
-* [License](#license)
+- [About the Project](#about-the-project)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Props](#props)
+- [Contribute](#contribute)
+- [Contributors](#contributors)
+- [License](#license)
 
 ## About The Project
 
-This project's purpose is to provide an easy solution for implementing infinite scroll feature to the web applications. The infinite scroll component is built with Observer Pattern and React Hooks.
-<br>
+This project's purpose is to provide an easy solution for implementing infinite scroll feature to the web applications. The infinite scroll component is built with Observer Pattern and React Hooks. <br>
 
 ## Installation
 
@@ -47,6 +42,7 @@ yarn add react-infinite-scroll-comp
 ## Usage
 
 Import component at top level:
+
 ```
 import { InfiniteScroll } from 'react-infinite-scroll-comp';
 ```
@@ -55,11 +51,11 @@ DOM scroll events
 
 ```
 /*
-Infinite scroll component fills the whole width and height of its wrapper. 
+Infinite scroll component fills the whole width and height of its wrapper.
 Style your wrapper div accoordingly.
 */
 <div style={{ height: '300px' }}>
-    <InfiniteScroll 
+    <InfiniteScroll
         Loader = <MyCustomLoader />,
         hasMore,
         callBack = {myCallBack},
@@ -77,6 +73,7 @@ Style your wrapper div accoordingly.
 ```
 
 Example Component
+
 ```
 import React, { useState } from 'react';
 import { InfiniteScroll } from 'react-infinite-scroll-comp';
@@ -126,11 +123,11 @@ export default MyComp;
 | Name | Required | Type | Default | Descriptionn |
 | --- | --- | --- | --- | --- |
 | Loader | no | element | three dots | Loader spinner to show when callback function is called. |
-| useLoader | no | boolen | true | Whether to show loader or not.  |
+| useLoader | no | boolen | true | Whether to show loader or not. |
 | hasMore | yes | boolean | --- | If there are more items to be loaded. |
-| callBack | yes | function | --- | A callback when more items are requested by the user.  |
-| containerStyle | no | CSSProperties | { } | Style for wrapper div of items.  |
-| children | yes | element | --- | Content for infinite scroll.  |
+| callBack | yes | function | --- | A callback when more items are requested by the user. |
+| containerStyle | no | CSSProperties | { } | Style for wrapper div of items. |
+| children | yes | element | --- | Content for infinite scroll. |
 | useTopScroll | no | boolean | false | Reverse scroll direction from top-to-bottom to bottom-to-top. |
 
 ## Contribute
@@ -140,8 +137,7 @@ Contributions, issues and feature requests are welcome!
 1. Fork it (https://github.com/YemreAybey/React-Infinite-Scroll/fork)
 2. Create your working branch (git checkout -b [choose-a-name])
 3. Commit your changes (git commit -am 'what this commit will fix/add/improve')
-4. Push to the branch (git push origin [chosen-name])
-Create a new Pull Request
+4. Push to the branch (git push origin [chosen-name]) Create a new Pull Request
 
 ## Contributors
 
@@ -150,6 +146,7 @@ Create a new Pull Request
 - [BatuhanYilmazzz](https://github.com/BatuhanYilmazzz)
 
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
 [contributors-shield]: https://img.shields.io/github/contributors/YemreAybey/React-Infinite-Scroll.svg?style=flat-square
 [contributors-url]: https://github.com/YemreAybey/React-Infinite-Scroll/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/YemreAybey/React-Infinite-Scroll.svg?style=flat-square
